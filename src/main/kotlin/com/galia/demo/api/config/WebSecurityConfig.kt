@@ -1,4 +1,4 @@
-package com.galia.demo.api.pizza.v1.config
+package com.galia.demo.api.config
 
 import org.springframework.context.annotation.Configuration
 import org.springframework.security.config.annotation.web.builders.HttpSecurity
@@ -12,7 +12,7 @@ class WebSecurityConfig(): WebSecurityConfigurerAdapter() {
 
     override fun configure(http: HttpSecurity) {
         http.csrf().disable().authorizeRequests()
-            .antMatchers("/pizza/v1/**")
+            .antMatchers("/v1/pizza/**")
             .permitAll()
             .anyRequest()
             .authenticated()

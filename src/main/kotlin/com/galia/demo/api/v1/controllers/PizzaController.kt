@@ -1,8 +1,8 @@
-package com.galia.demo.api.pizza.v1.controllers
+package com.galia.demo.api.v1.controllers
 
-import com.galia.demo.api.pizza.v1.components.PizzaAssembler
-import com.galia.demo.api.pizza.v1.helpers.PizzaListVO
-import com.galia.demo.api.pizza.v1.services.PizzaServiceImpl
+import com.galia.demo.api.v1.components.PizzaAssembler
+import com.galia.demo.api.v1.helpers.PizzaListVO
+import com.galia.demo.api.v1.services.PizzaServiceImpl
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest
 
 
 @RestController
-@RequestMapping("/pizza/v1")
+@RequestMapping("v1/pizza")
 class PizzaController(val pizzaServiceImpl: PizzaServiceImpl, val pizzaAssembler: PizzaAssembler) {
 
     @GetMapping("/list")

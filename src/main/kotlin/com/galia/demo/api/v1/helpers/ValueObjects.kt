@@ -1,4 +1,4 @@
-package com.galia.demo.api.pizza.v1.helpers
+package com.galia.demo.api.v1.helpers
 
 data class PizzaVO(
     var id: Long,

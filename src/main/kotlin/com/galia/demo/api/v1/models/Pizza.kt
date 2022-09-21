@@ -1,4 +1,4 @@
-package com.galia.demo.api.pizza.v1.models
+package com.galia.demo.api.v1.models
 
 import javax.persistence.*
 @Entity

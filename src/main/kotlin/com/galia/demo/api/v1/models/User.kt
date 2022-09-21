@@ -1,6 +1,6 @@
-package com.galia.demo.api.pizza.v1.models
+package com.galia.demo.api.v1.models
 
-import com.galia.demo.api.pizza.v1.listeners.UserListener
+import com.galia.demo.api.v1.listeners.UserListener
 import javax.persistence.*
 import javax.validation.constraints.Pattern
 import javax.validation.constraints.Size
