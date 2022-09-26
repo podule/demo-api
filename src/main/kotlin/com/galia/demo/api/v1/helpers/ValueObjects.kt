@@ -10,5 +10,5 @@ data class PizzaVO(
 )
 
 data class PizzaListVO(
-    val list: List<PizzaVO>
+    val menu: List<PizzaVO>
 )

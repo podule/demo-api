@@ -23,9 +23,16 @@ class PizzaController(val pizzaServiceImpl: PizzaServiceImpl, val pizzaAssembler
     @Autowired
     lateinit var resourceLoader: ResourceLoader
 
-    @GetMapping("/list")
+    @GetMapping("/menu")
     fun list(request: HttpServletRequest): ResponseEntity<PizzaListVO> {
         val list = pizzaServiceImpl.getListPizza()
+
+        return ResponseEntity.ok(pizzaAssembler.toPizzaListVO(list))
+    }
+
+    @GetMapping("/menu/{index}/{size}")
+    fun list(@PathVariable(name = "index") index: Int, @PathVariable(name = "size") size: Int, request: HttpServletRequest): ResponseEntity<PizzaListVO> {
+        val list = pizzaServiceImpl.getPagingListPizza(index, size)
 
         return ResponseEntity.ok(pizzaAssembler.toPizzaListVO(list))
     }
