@@ -12,7 +12,7 @@ class WebSecurityConfig(): WebSecurityConfigurerAdapter() {
 
     override fun configure(http: HttpSecurity) {
         http.csrf().disable().authorizeRequests()
-            .antMatchers("/v1/pizza/**")
+            .antMatchers("/v1/pizza/**", "/v1/order/**")
             .permitAll()
             .anyRequest()
             .authenticated()
